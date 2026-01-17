@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<title>Vulnerability Scan Report</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body { font-family: Arial; }
+.summary { background:#f2f2f2; padding:15px; margin-bottom:20px; }
+
+table { width:100%; border-collapse:collapse; }
+th,td { border:1px solid #333; padding:8px; }
+th { background:#222; color:white; }
+
+.High { background:#ffd6d6; }
+.Medium { background:#ffe4b3; }
+.Low { background:#d6ffd6; }
+.Info { background:#eeeeee; }
+
+.badge-confirmed { background:red;color:white;padding:4px 8px;border-radius:6px; }
+.badge-potential { background:orange;color:black;padding:4px 8px;border-radius:6px; }
+.badge-not { background:gray;color:white;padding:4px 8px;border-radius:6px; }
+</style>
+</head>
+
+<body>
+
+<h2>Vulnerability Scan Report</h2>
+
+<div class="summary">
+<b>Target:</b> http://testphp.vulnweb.com<br>
+<b>Start:</b> 2026-01-17 18:23:02.635559<br>
+<b>End:</b> 2026-01-17 18:23:06.901706<br><br>
+
+<b>Total Vulnerabilities:</b> 1<br>
+<b>High:</b> 0 |
+<b>Medium:</b> 1 |
+<b>Low:</b> 0 |
+<b>Info:</b> 2
+</div>
+
+
+<br>
+
+<table>
+<tr>
+<th>Type</th>
+<th>Status</th>
+<th>Severity</th>
+<th>CVSS</th>
+<th>URL</th>
+<th>Payload</th>
+<th>Description</th>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>http://testphp.vulnweb.com</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>http://testphp.vulnweb.com</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>http://testphp.vulnweb.com</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+</table></body></html>
