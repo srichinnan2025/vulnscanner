@@ -21,7 +21,8 @@ def crawl(start_url, max_pages=30):
             for a in soup.find_all("a", href=True):
                 link = urljoin(url, a["href"])
                 if urlparse(link).netloc == domain:
-                    queue.append(link)
+                    if link not in visited:
+                        queue.append(link)
         except:
             pass
 

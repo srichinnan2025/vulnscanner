@@ -28,15 +28,15 @@ th { background:#222; color:white; }
 <h2>Vulnerability Scan Report</h2>
 
 <div class="summary">
-<b>Target:</b> http://testphp.vulnweb.com<br>
-<b>Start:</b> 2026-01-17 18:23:02.635559<br>
-<b>End:</b> 2026-01-17 18:23:06.901706<br><br>
+<b>Target:</b> https://demo.testfire.net/<br>
+<b>Start:</b> 2026-01-17 18:52:07.020833<br>
+<b>End:</b> 2026-01-17 18:57:11.752890<br><br>
 
-<b>Total Vulnerabilities:</b> 1<br>
+<b>Total Vulnerabilities:</b> 30<br>
 <b>High:</b> 0 |
-<b>Medium:</b> 1 |
+<b>Medium:</b> 30 |
 <b>Low:</b> 0 |
-<b>Info:</b> 2
+<b>Info:</b> 60
 </div>
 
 
@@ -58,7 +58,7 @@ th { background:#222; color:white; }
 <td><span class='badge-not'>Not Vulnerable</span></td>
 <td>Info</td>
 <td>0.0</td>
-<td>http://testphp.vulnweb.com</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_deposit.htm</td>
 <td><code><script>alert(1)</script></code></td>
 <td>XSS payload tested but not reflected</td>
 </tr>
@@ -68,7 +68,7 @@ th { background:#222; color:white; }
 <td><span class='badge-not'>Not Vulnerable</span></td>
 <td>Info</td>
 <td>0.0</td>
-<td>http://testphp.vulnweb.com</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_deposit.htm</td>
 <td><code>N/A</code></td>
 <td>SQL Injection tests did not trigger any database errors</td>
 </tr>
@@ -78,7 +78,877 @@ th { background:#222; color:white; }
 <td><span class='badge-confirmed'>Confirmed</span></td>
 <td>Medium</td>
 <td>4.3</td>
-<td>http://testphp.vulnweb.com</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_deposit.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/default.jsp?content=security.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/default.jsp?content=security.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/default.jsp?content=security.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_insurance.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_insurance.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=business_insurance.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/feedback.jsp</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/feedback.jsp</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/feedback.jsp</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_deposit.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_deposit.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=business_deposit.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_investor.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_investor.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_investor.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_about.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_about.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_about.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_careers.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_careers.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_careers.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/survey_questions.jsp</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/survey_questions.jsp</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/survey_questions.jsp</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_retirement.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_retirement.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=business_retirement.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_lending.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_lending.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=business_lending.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_contact.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_contact.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_contact.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=personal.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=inside.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_loans.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_loans.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_loans.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_investments.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_investments.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_investments.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_cards.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_cards.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_cards.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_cards.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_cards.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=business_cards.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_checking.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_checking.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_checking.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/subscribe.jsp</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/subscribe.jsp</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/subscribe.jsp</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/login.jsp</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/login.jsp</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/login.jsp</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_press.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_press.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=inside_press.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=privacy.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=privacy.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=privacy.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_other.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business_other.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=business_other.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/cgi.exe</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/cgi.exe</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/cgi.exe</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=business.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=business.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_savings.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_savings.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_savings.htm</td>
+<td><code>Missing</code></td>
+<td>X-Frame-Options header is missing</td>
+</tr>
+
+<tr class="Info">
+<td>XSS</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_other.htm</td>
+<td><code><script>alert(1)</script></code></td>
+<td>XSS payload tested but not reflected</td>
+</tr>
+
+<tr class="Info">
+<td>SQL Injection</td>
+<td><span class='badge-not'>Not Vulnerable</span></td>
+<td>Info</td>
+<td>0.0</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_other.htm</td>
+<td><code>N/A</code></td>
+<td>SQL Injection tests did not trigger any database errors</td>
+</tr>
+
+<tr class="Medium">
+<td>Clickjacking</td>
+<td><span class='badge-confirmed'>Confirmed</span></td>
+<td>Medium</td>
+<td>4.3</td>
+<td>https://demo.testfire.net/index.jsp?content=personal_other.htm</td>
 <td><code>Missing</code></td>
 <td>X-Frame-Options header is missing</td>
 </tr>

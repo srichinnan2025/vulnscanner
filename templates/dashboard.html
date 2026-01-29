@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VulnScanner Pro</title>
+    <style>
+        body { background:#0b1220; color:white; font-family:Arial }
+        table { width:100%; border-collapse:collapse; margin-top:20px }
+        th, td { border:1px solid #333; padding:8px; text-align:center }
+        th { background:#111 }
+        .High { color:red }
+        .Medium { color:orange }
+        .Info { color:lightgreen }
+    </style>
+</head>
+<body>
+
+<h2>🔐 Sri's VulnScanner Pro </h2>
+
+<form method="post">
+    <input type="text" name="url" placeholder="https://example.com" required>
+    <button type="submit">Scan</button>
+</form>
+
+<p><b>Status:</b> {{ progress }}</p>
+
+{% for r in results %}
+<h3>{{ r.url }}</h3>
+<table>
+<tr>
+    <th>Type</th><th>Status</th><th>Severity</th>
+    <th>CVSS</th><th>OWASP</th><th>Description</th>
+</tr>
+{% for f in r.findings %}
+<tr>
+    <td>{{ f.type }}</td>
+    <td>{{ f.status }}</td>
+    <td class="{{ f.severity }}">{{ f.severity }}</td>
+    <td>{{ f.cvss }}</td>
+    <td>{{ f.owasp }}</td>
+    <td>{{ f.description }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}
+
+</body>
+</html>

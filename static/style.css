@@ -1,0 +1,121 @@
+body {
+    background: linear-gradient(135deg, #020617, #020617);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    padding-bottom: 200px;
+}
+
+/* Scan UI */
+.scan-container {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.scan-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.scan-form input {
+    width: 320px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+}
+
+.scan-form button {
+    padding: 12px 22px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background: #0ea5e9;
+    color: #000;
+    cursor: pointer;
+}
+
+.scan-form button:hover {
+    background: #38bdf8;
+}
+
+.scan-time {
+    margin-top: 10px;
+    color: #94a3b8;
+}
+
+.status {
+    margin-top: 15px;
+    color: #22c55e;
+}
+
+/* Table */
+table {
+    width: 95%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+th {
+    background: #020617;
+}
+
+.info {
+    color: #22c55e;
+}
+
+.medium {
+    color: #facc15;
+}
+
+.high {
+    color: #ef4444;
+}
+
+.target-url {
+    margin-left: 40px;
+    margin-top: 40px;
+    color: #38bdf8;
+}
+
+/* 🤖 Chatbot */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 260px;
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#chat-header {
+    background: #0ea5e9;
+    color: black;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+#chat-body {
+    height: 150px;
+    padding: 8px;
+    overflow-y: auto;
+    color: #e5e7eb;
+}
+
+#chat-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+}

@@ -1,132 +1,78 @@
 import requests
 
-# ---------------- XSS ----------------
 def check_xss(url):
-    findings = []
     payload = "<script>alert(1)</script>"
-    test_url = url + "?xss=" + payload
-
     try:
-        r = requests.get(test_url, timeout=5)
-
-        if payload.lower() in r.text.lower():
-            findings.append({
+        r = requests.get(url, params={"q": payload}, timeout=5)
+        if payload in r.text:
+            return {
                 "type": "XSS",
-                "status": "Confirmed",
+                "status": "Vulnerable",
                 "severity": "High",
-                "cvss": 7.4,
-                "url": test_url,
-                "payload": payload,
-                "description": "Reflected XSS confirmed (payload reflected)"
-            })
-        else:
-            findings.append({
-                "type": "XSS",
-                "status": "Not Vulnerable",
-                "severity": "Info",
-                "cvss": 0.0,
-                "url": url,
-                "payload": payload,
-                "description": "XSS payload tested but not reflected"
-            })
+                "cvss": "6.1",
+                "owasp": "A03: Injection",
+                "description": "Reflected XSS detected"
+            }
     except:
         pass
 
-    return findings
+    return {
+        "type": "XSS",
+        "status": "Not Vulnerable",
+        "severity": "Info",
+        "cvss": "0.0",
+        "owasp": "A03: Injection",
+        "description": "XSS payload not reflected"
+    }
 
-# ---------------- SQL Injection ----------------
+
 def check_sqli(url):
-    findings = []
-    payloads = ["'", "\"", "' OR '1'='1"]
-    sql_errors = [
-        "sql syntax", "mysql", "syntax error",
-        "unclosed quotation", "odbc", "pdo"
-    ]
-
+    payload = "' OR '1'='1"
     try:
-        normal = requests.get(url, timeout=5)
-        normal_text = normal.text.lower()
+        r = requests.get(url, params={"id": payload}, timeout=5)
+        errors = ["sql", "mysql", "syntax", "warning"]
+        if any(e in r.text.lower() for e in errors):
+            return {
+                "type": "SQL Injection",
+                "status": "Vulnerable",
+                "severity": "High",
+                "cvss": "7.5",
+                "owasp": "A03: Injection",
+                "description": "SQL error message detected"
+            }
     except:
-        return findings
+        pass
 
-    potential = False
+    return {
+        "type": "SQL Injection",
+        "status": "Not Vulnerable",
+        "severity": "Info",
+        "cvss": "0.0",
+        "owasp": "A03: Injection",
+        "description": "No SQL indicators found"
+    }
 
-    for payload in payloads:
-        test_url = url + payload
-        try:
-            r = requests.get(test_url, timeout=5)
-            injected_text = r.text.lower()
 
-            for err in sql_errors:
-                if err in injected_text and err not in normal_text:
-                    if injected_text != normal_text and r.status_code == 500:
-                        findings.append({
-                            "type": "SQL Injection",
-                            "status": "Confirmed",
-                            "severity": "High",
-                            "cvss": 9.1,
-                            "url": test_url,
-                            "payload": payload,
-                            "description": f"Confirmed SQL Injection using payload: {payload}"
-                        })
-                        return findings
-                    else:
-                        potential = True
-        except:
-            pass
-
-    if potential:
-        findings.append({
-            "type": "SQL Injection",
-            "status": "Potential / False Positive",
-            "severity": "Medium",
-            "cvss": 5.0,
-            "url": url,
-            "payload": "Tested",
-            "description": "SQL error signs detected but not enough evidence (possible false positive)"
-        })
-    else:
-        findings.append({
-            "type": "SQL Injection",
-            "status": "Not Vulnerable",
-            "severity": "Info",
-            "cvss": 0.0,
-            "url": url,
-            "payload": "N/A",
-            "description": "SQL Injection tests did not trigger any database errors"
-        })
-
-    return findings
-
-# ---------------- Clickjacking ----------------
 def check_clickjacking(url):
-    findings = []
-
     try:
         r = requests.get(url, timeout=5)
-        xfo = r.headers.get("X-Frame-Options")
-
-        if not xfo:
-            findings.append({
+        if "X-Frame-Options" not in r.headers:
+            return {
                 "type": "Clickjacking",
                 "status": "Confirmed",
                 "severity": "Medium",
-                "cvss": 4.3,
-                "url": url,
-                "payload": "Missing",
-                "description": "X-Frame-Options header is missing"
-            })
-        else:
-            findings.append({
-                "type": "Clickjacking",
-                "status": "Not Vulnerable",
-                "severity": "Info",
-                "cvss": 0.0,
-                "url": url,
-                "payload": xfo,
-                "description": f"X-Frame-Options present ({xfo})"
-            })
+                "cvss": "4.3",
+                "owasp": "A05: Security Misconfiguration",
+                "description": "X-Frame-Options header missing"
+            }
     except:
         pass
 
-    return findings
+    return {
+        "type": "Clickjacking",
+        "status": "Not Vulnerable",
+        "severity": "Info",
+        "cvss": "0.0",
+        "owasp": "A05: Security Misconfiguration",
+        "description": "Clickjacking protection enabled"
+    }
